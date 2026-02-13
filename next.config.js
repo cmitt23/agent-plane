@@ -1,7 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  // Output standalone for better Netlify compatibility
-  output: 'standalone',
-}
+const nextConfig = {}
 
 module.exports = nextConfig
