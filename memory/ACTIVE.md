@@ -32,15 +32,23 @@ Waiting on Chris to set up:
 4. Test: Can I read/write my own state?
 5. Document API in `docs/API.md`
 
-## Blockers
+## Credentials Status
 
-- Need Supabase project credentials
-- Need Vercel project connected
+**Received:**
+- ✅ Supabase Database Password (stored in `.env.local`)
+
+**Still needed:**
+- ⏳ Supabase Project URL (`NEXT_PUBLIC_SUPABASE_URL`)
+- ⏳ Supabase Anon Key (`NEXT_PUBLIC_SUPABASE_ANON_KEY`)  
+- ⏳ Supabase Service Role Key (`SUPABASE_SERVICE_ROLE_KEY`)
+- ⏳ Vercel project connected
+
+**Security reminder:** All credentials go in `.env.local` only. Never commit to git. Never log in memory files.
 
 ## Questions for Billy/Chris
 
-- Confirm Supabase project name: `agentplane`?
-- Confirm Vercel project name: `agent-plane`?
+- Need remaining Supabase credentials (URL + keys)
+- Confirm Vercel project connected to GitHub repo
 - Any specific features to prioritize first?
 
 ## Notes
