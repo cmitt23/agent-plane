@@ -21,10 +21,11 @@ export async function GET(request: NextRequest) {
       .eq('component_name', component)
 
     if (key) {
-      query = query.eq('state_key', key).single()
+      query = query.eq('state_key', key)
     }
 
-    const { data, error } = await query
+    // Apply .single() only if searching by specific key
+    const { data, error } = key ? await query.single() : await query
 
     if (error) {
       if (error.code === 'PGRST116') {

@@ -10,15 +10,17 @@ export async function GET(request: NextRequest) {
     const active_only = searchParams.get('active_only') === 'true'
 
     let query = supabase.from('workflows').select('*')
+    let shouldReturnSingle = false
 
     if (name) {
       query = query.eq('name', name)
+      shouldReturnSingle = true
       
       if (version) {
-        query = query.eq('version', parseInt(version)).single()
+        query = query.eq('version', parseInt(version))
       } else {
         // Get latest version by default
-        query = query.order('version', { ascending: false }).limit(1).single()
+        query = query.order('version', { ascending: false }).limit(1)
       }
     }
 
@@ -26,7 +28,7 @@ export async function GET(request: NextRequest) {
       query = query.eq('is_active', true)
     }
 
-    const { data, error } = await query
+    const { data, error } = shouldReturnSingle ? await query.single() : await query
 
     if (error) {
       if (error.code === 'PGRST116') {

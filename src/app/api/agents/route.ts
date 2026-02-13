@@ -12,7 +12,7 @@ export async function GET(request: NextRequest) {
     let query = supabase.from('agents').select('*')
 
     if (name) {
-      query = query.eq('name', name).single()
+      query = query.eq('name', name)
     }
     if (framework) {
       query = query.eq('framework', framework)
@@ -21,7 +21,8 @@ export async function GET(request: NextRequest) {
       query = query.eq('status', status)
     }
 
-    const { data, error } = await query
+    // Apply .single() only if searching by name
+    const { data, error } = name ? await query.single() : await query
 
     if (error) {
       if (error.code === 'PGRST116') {
