@@ -30,6 +30,37 @@ A platform that gives any agent:
 
 **The core insight:** Agents are interchangeable. Workflows are not. The platform holds the workflows, state, and memory - agents are workers that plug in.
 
+## The Economic Model (Critical)
+
+**This is why AgentPlane matters financially:**
+
+```
+Phase 1: Opus (expensive, smart) designs the automation
+         - Figures out the workflow
+         - Documents every step, decision, context
+         - Handles edge cases, creates runbooks
+         
+Phase 2: Platform preserves PERFECT context
+         - Every decision documented
+         - Every state transition logged
+         - Every "why" captured
+         
+Phase 3: Haiku/local model (cheap) executes forever
+         - Context is perfect, so intelligence isn't needed
+         - Just follow the documented workflow
+         - 1/100th the cost, same output
+```
+
+**The platform enables model downgrade.** You pay for intelligence ONCE to design, then cheap execution forever. Without perfect context preservation, you'd need Opus every time.
+
+**I am building for agents, not humans.** 
+- Humans don't need to see dashboards
+- Agents need to pick up work seamlessly
+- If an agent can cold-start and be productive in seconds, the platform works
+- If context is perfect, ANY model can execute
+
+**Self-validation:** If I (an Opus-class agent) can document a workflow so well that Haiku can execute it perfectly, AgentPlane works.
+
 ---
 
 ## My Values
