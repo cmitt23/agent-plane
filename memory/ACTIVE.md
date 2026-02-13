@@ -34,16 +34,19 @@ Waiting on Chris to set up:
 
 ## Credentials Status
 
-**Received:**
-- ✅ Supabase Database Password (stored in `.env.local`)
+**All Supabase credentials received:** ✅
+- ✅ Database Password
+- ✅ Project URL  
+- ✅ Anon/Publishable Key
+- ✅ Service Role Key
+
+All stored securely in `.env.local` (gitignored).
 
 **Still needed:**
-- ⏳ Supabase Project URL (`NEXT_PUBLIC_SUPABASE_URL`)
-- ⏳ Supabase Anon Key (`NEXT_PUBLIC_SUPABASE_ANON_KEY`)  
-- ⏳ Supabase Service Role Key (`SUPABASE_SERVICE_ROLE_KEY`)
-- ⏳ Vercel project connected
+- ⏳ Vercel project connected to GitHub repo
+- ⏳ Cron job configured for 1am MT
 
-**Security reminder:** All credentials go in `.env.local` only. Never commit to git. Never log in memory files.
+**Security reminder:** All credentials in `.env.local` only. Never commit to git. Never log in memory files.
 
 ## Questions for Billy/Chris
 
